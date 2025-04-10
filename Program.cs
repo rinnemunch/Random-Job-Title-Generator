@@ -1,10 +1,18 @@
-﻿string[] adjectives = { "Senior", "Lead", "Dynamic", "Unpaid", "Future", "Virtual" };
-string[] roles = { "Data Wrangler", "Pixel Architect", "Spreadsheet Ninja", "Cloud Whisperer", "Tech Wizard" }; 
+﻿using System;
 
-Random rand = new Random(); 
-string adjective = adjectives[rand.Next(adjectives.Length)];
-string role = roles[rand.Next(roles.Length)];
+class Program
+{
+    static void Main()
+    {
+        string[] adjectives = { "Senior", "Lead", "Dynamic", "Unpaid", "Future", "Virtual" };
+        string[] roles = { "Data Wrangler", "Pixel Architect", "Spreadsheet Ninja", "Cloud Whisperer", "Tech Wizard" };
 
-string jobTitle = $"{adjective} {role}"; 
+        Random rand = new Random();
+        string adjective = adjectives[rand.Next(adjectives.Length)];
+        string role = roles[rand.Next(roles.Length)];
 
-Console.WriteLine("Your new job title: " + jobTitle);
+        string jobTitle = $"{adjective} {role}";
+
+        Console.WriteLine("Your new job title: " + jobTitle);
+    }
+}
